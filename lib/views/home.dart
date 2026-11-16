@@ -1,3 +1,4 @@
+import 'package:atividade_pdm/components/item_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -46,13 +47,14 @@ class _HomePageState extends State<HomePage>
       body: TabBarView(
         controller: _tabController,
         children: [
-          Center(
-            child: Column(
-              mainAxisAlignment: .center,
-              children: [
-                const Text('You have pushed the button this many times:'),
-              ],
-            ),
+          GridView.count(
+            crossAxisCount: 2,
+            children: [
+              ItemCard(icon: Icons.home, title: 'Bar & Hoteis', onTap: () => {}),
+              ItemCard(icon: Icons.dinner_dining, title: 'Fine Dining', onTap: () => {
+                
+              }),
+            ],
           ),
           Center(child: Text('Aba para locais')),
           Center(child: Text('Aba para Marcados')),

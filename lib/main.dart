@@ -1,3 +1,4 @@
+import 'package:atividade_pdm/views/dinner.dart';
 import 'package:flutter/material.dart';
 import 'package:atividade_pdm/views/home.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(title: 'Discovery'),
+        '/dinner': (context) => const DinnerPage()
       },
     );
   }
