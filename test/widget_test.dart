@@ -11,6 +11,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:atividade_pdm/main.dart';
 
 void main() {
+  testWidgets('Bottom navigation switches pages', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+
+    await tester.tap(find.text('Marcados'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Aba para Marcados'), findsOneWidget);
+  });
+
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
