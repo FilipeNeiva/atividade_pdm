@@ -50,10 +50,20 @@ class _HomePageState extends State<HomePage>
           GridView.count(
             crossAxisCount: 2,
             children: [
-              ItemCard(icon: Icons.home, title: 'Bar & Hoteis', onTap: () => {}),
-              ItemCard(icon: Icons.dinner_dining, title: 'Fine Dining', onTap: () => {
-                
-              }),
+              ItemCard(
+                icon: Icons.home, title: 'Bar & Hoteis', 
+                onTap: () => Navigator.pushNamed(context, '/bar'),
+              ),
+              ItemCard(
+                icon: Icons.dinner_dining,
+                title: 'Fine Dining',
+                onTap: () => Navigator.pushNamed(context, '/dinner'),
+              ),
+              ItemCard(
+                icon: Icons.place,
+                title: 'Locais',
+                onTap: () => Navigator.pushNamed(context, '/locais'),
+              ),
             ],
           ),
           Center(child: Text('Aba para locais')),

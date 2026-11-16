@@ -1,4 +1,6 @@
+import 'package:atividade_pdm/views/bar_hoteis.dart';
 import 'package:atividade_pdm/views/dinner.dart';
+import 'package:atividade_pdm/views/locais.dart';
 import 'package:flutter/material.dart';
 import 'package:atividade_pdm/views/home.dart';
 
@@ -21,7 +23,9 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(title: 'Discovery'),
-        '/dinner': (context) => const DinnerPage()
+        '/dinner': (context) => const DinnerPage(),
+        '/bar': (context) => const BarHoteisPage(),
+        '/locais': (context) => const LocaisPage()
       },
     );
   }
